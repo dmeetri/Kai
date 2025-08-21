@@ -1,4 +1,5 @@
-vosk-model/
+vosk-model-*/
+fast-ai/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
