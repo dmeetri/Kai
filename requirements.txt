@@ -1,8 +1,12 @@
 certifi==2025.8.3
 cffi==1.17.1
 charset-normalizer==3.4.3
+DAWG-Python==0.7.2
+docopt==0.6.2
 idna==3.10
 pycparser==2.22
+pymorphy2==0.9.1
+pymorphy2-dicts-ru==2.4.417127.4579844
 requests==2.32.5
 sounddevice==0.5.2
 srt==3.5.3
