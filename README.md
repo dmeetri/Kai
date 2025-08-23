@@ -2,7 +2,7 @@
 Voice assistant. Control your PC with voice commands
 Not all application functions work correctly on different OS. This build is developed under MacOS
 
-## requirements
+## Requirements
 - python 3.10
 - pip > 25
 - virtualenv
