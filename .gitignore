@@ -1,5 +1,6 @@
-vosk-model-*/
-fast-ai/
+.DS_Store
+.vscode/
+vosk-model-ru-0.10/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,26 +1,17 @@
-import fasttext
-import numpy as np
+from pydoc import text
+import re
 
 class ParceCommand:
     def __init__(self, cmd: str):
-        self.cmd = cmd
-        self.model = fasttext.load_model("ai_models/commands_model.bin")
+        parts = re.split(r'\b(и|потом)\b', cmd, flags=re.IGNORECASE)
+        parts = [p.strip() for p in parts if p.strip() and p.lower() not in ['и', 'потом']]
+        self.command_list = [p.split() for p in parts]
+    
+    def _parce(self):
+        for one_cmd_list in self.command_list:
+            pass
 
-        self.command_methods = {
-            "say_hallo": self.say_hallo,
-        }
-
-    def parce(self):
-        labels, probabilities = self.model.predict(self.cmd)
-        labels = [label.replace("__label__", "") for label in labels]
-        probabilities = np.asarray(probabilities)
-
-        if not labels: return
-
-        if labels[0] in self.command_methods:
-            self.command_methods[labels[0]]()
-        else:
-            print("Команда не найдена")
-
-    def say_hallo(self):
-        print('FASTTEXT - HALLO')
+    @property
+    def run(self):
+        for one_cmd_list in self.command_list:
+            print(one_cmd_list)

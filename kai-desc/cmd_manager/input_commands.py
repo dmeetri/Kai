@@ -25,8 +25,5 @@ class InputCommands:
                     res = json.loads(self.rec.Result())
                     if res.get("text"):
                         print("You", res["text"])
-                        
-                        pc = ParceCommand(res["text"])
-                        pc.parce()
                 else:
                     pass
