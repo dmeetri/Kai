@@ -2,8 +2,6 @@ import queue, sys, json
 import sounddevice as sd
 from vosk import Model, KaldiRecognizer
 
-from .parcer_commands import ParceCommand
-
 class InputCommands:
     def __init__(self):
         self.model = Model("vosk-model/vosk-model-ru-0.10")

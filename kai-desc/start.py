@@ -1,6 +1,6 @@
 from cmd_manager import *
 
-from cmd_manager.parcer_commands import ParceCommand
+from cmd_manager import ParceCommand
 
 def main():
     cmd = input(">>> ")
